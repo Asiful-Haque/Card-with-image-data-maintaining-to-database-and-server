@@ -22,3 +22,14 @@ exports.registerUser = async (req, res) => {
         res.status(500).json({ error: "Failed to save registration data" });
     }
 };
+
+exports.getAllRegistrations = async (req, res) => {
+    try {
+        const registrations = await registerSchemaModel.find();
+        res.json(registrations);
+        //console.log(registrations);
+    } catch (error) {
+        console.error("Error fetching registrations:", error);
+        res.status(500).json({ error: "Failed to fetch registrations" });
+    }
+};

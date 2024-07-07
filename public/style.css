@@ -34,3 +34,22 @@ button {
     color: white;
     cursor: pointer;
 }
+
+
+
+
+.registration-item {
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    border: 1px solid rgb(252, 28, 28);
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensure overflow is hidden to contain images */
+}
+
+.registration-item img {
+    width: 100%; /* Make the image fill its parent container */
+    height: 100%; /* Make the image fill its parent container */
+    object-fit: contain; /* Maintain aspect ratio and contain the entire container */
+    display: block;
+}

@@ -1,7 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-const { registerUser } = require("../controller/registrationController");
+const { registerUser, getAllRegistrations } = require("../controller/registrationController");
 
 const router = express.Router();
 
@@ -11,5 +11,6 @@ const upload = multer({ storage: storage });
 
 
 router.post("/api/submit", upload.single("image"), registerUser);
+router.get("/api/getRegistrations", getAllRegistrations);
 
 module.exports = router;
